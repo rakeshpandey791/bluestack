@@ -17,7 +17,7 @@ class CampaignDetail extends Component{
                         <small>{moment(this.props.campaignDetail.createdOn).fromNow()}</small>
                     </div>
                     <div className="campaign-name">
-                        <div><img src={window.location.origin +'/' + this.props.campaignDetail.image_url} alt={this.props.campaignDetail.name} /></div>
+                        <div><img src={process.env.PUBLIC_URL +'/' + this.props.campaignDetail.image_url} alt={this.props.campaignDetail.name} /></div>
                         <div>
                             <p>{this.props.campaignDetail.name}</p>
                             <p><small>{this.props.campaignDetail.region}</small></p>
@@ -27,21 +27,21 @@ class CampaignDetail extends Component{
                     </div>
                     <div>
                         <a href onClick={() => this.props.setSelectedCampaign(this.props.campaignDetail)}>
-                            <img src={window.location.origin + '/price.png'} className="img" alt={this.props.campaignDetail.name}/>
+                            <img src={process.env.PUBLIC_URL + '/price.png'} className="img" alt={this.props.campaignDetail.name}/>
                             <span>View Price </span>
                         </a>
                     </div>
                     <div>
                         <a href>
-                            <img src={window.location.origin + '/file.png'} className="img" alt={this.props.campaignDetail.name} />
+                            <img src={process.env.PUBLIC_URL + '/file.png'} className="img" alt={this.props.campaignDetail.name} />
                             <span>CSV</span>
                         </a>
                         <a href>
-                            <img src={window.location.origin + '/statistics-report.png'} className="img" alt={this.props.campaignDetail.name} />
+                            <img src={process.env.PUBLIC_URL + '/statistics-report.png'} className="img" alt={this.props.campaignDetail.name} />
                             <span>Report</span>
                         </a>
                         <a href>
-                            <img src={window.location.origin + '/calendar.png'} className="img" alt={this.props.campaignDetail.name} />
+                            <img src={process.env.PUBLIC_URL + '/calendar.png'} className="img" alt={this.props.campaignDetail.name} />
                             <span>Schedule Again</span>
                         </a>
                     </div>

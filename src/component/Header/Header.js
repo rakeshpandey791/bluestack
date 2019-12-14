@@ -8,7 +8,7 @@ class Header extends Component {
             <div className="header">
                 <div></div>
                 <div>
-                    <img src={window.location.origin + '/new-logo-white.png'} className="logo" alt="header logo"/>
+                    <img src={process.env.PUBLIC_URL + '/new-logo-white.png'} className="logo" alt="header logo"/>
                 </div>
                 <div></div>
             </div>
