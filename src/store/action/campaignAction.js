@@ -3,7 +3,7 @@ import campaigns from '../campaign';
 
 const getCampaignListData = (campaignReducerData) => {
     const retObj = {
-        campaignList: campaignReducerData.campaignLSData
+        campaignList: campaignReducerData.campaignLSData ? campaignReducerData.campaignLSData : campaigns.data
     }
     const todatDate = new Date();
     todatDate.setHours(0,0,0,0);
