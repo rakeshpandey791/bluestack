@@ -29,28 +29,34 @@ class CampaignList extends Component {
                 <div></div>
                 <div>
                     <div className="title">
-                        <h1>Manage Campaigns</h1>
+                        <h1>{this.props.translation.manage_capaign}</h1>
                     </div>
                     <div className="tab-container" onClick={this.changeTab}>
                         <div className={`tab-item ' ${this.props.campaignType ===  'UPCOMING' ? 'active' :''}`}
                              data-type="UPCOMING">
-                            <a href className={this.props.campaignType ===  'UPCOMING' ? 'active' :''} data-type="UPCOMING">Upcoming Campaigns</a>
+                            <a href className={this.props.campaignType ===  'UPCOMING' ? 'active' :''} data-type="UPCOMING">
+                                {this.props.translation.upcoming_capaign}
+                            </a>
                         </div>
                         <div className={`tab-item ' ${this.props.campaignType ===  'LIVE' ? 'active' :''}`}
                              data-type="LIVE">
-                            <a href className={this.props.campaignType ===  'LIVE' ? 'active' :''} data-type="LIVE">Live Campaigns</a>
+                            <a href className={this.props.campaignType ===  'LIVE' ? 'active' :''} data-type="LIVE">
+                                {this.props.translation.live_capaign}
+                            </a>
                         </div>
                         <div className={`tab-item ' ${this.props.campaignType ===  'PAST' ? 'active' :''}`}
                              data-type="PAST">
-                            <a href className={this.props.campaignType ===  'PAST' ? 'active' :''} data-type="PAST">Past Campaigns</a>
+                            <a href className={this.props.campaignType ===  'PAST' ? 'active' :''} data-type="PAST">
+                                {this.props.translation.past_capaign}
+                            </a>
                         </div>
                     </div>
                     <div className="data-container">
                         <div className="list-caption">
-                            <div>DATE</div>
-                            <div>CAMPAIGN</div>
-                            <div>VIEW</div>
-                            <div>ACTIONS</div>
+                            <div>{this.props.translation.DATE}</div>
+                            <div>{this.props.translation.CAMPAIGN}</div>
+                            <div>{this.props.translation.VIEW}</div>
+                            <div>{this.props.translation.ACTIONS}</div>
                         </div>
                         {
                             this.props.campaignList.map( (campaign, index) => (
@@ -72,7 +78,8 @@ const mapPropsToDispatch = (state) => {
     return {
         campaignList: state.campaignReducer.campaignList,
         campaignType: state.campaignReducer.campaignType,
-        selectedCampaign: state.campaignReducer.selectedCampaign
+        selectedCampaign: state.campaignReducer.selectedCampaign,
+        translation: state.localizationReducer.translation
     }
 }
 

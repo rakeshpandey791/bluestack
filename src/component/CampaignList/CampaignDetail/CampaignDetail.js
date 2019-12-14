@@ -28,21 +28,21 @@ class CampaignDetail extends Component{
                     <div>
                         <a href onClick={() => this.props.setSelectedCampaign(this.props.campaignDetail)}>
                             <img src={process.env.PUBLIC_URL + '/price.png'} className="img" alt={this.props.campaignDetail.name}/>
-                            <span>View Price </span>
+                            <span>{this.props.translation.view_price} </span>
                         </a>
                     </div>
                     <div>
                         <a href>
                             <img src={process.env.PUBLIC_URL + '/file.png'} className="img" alt={this.props.campaignDetail.name} />
-                            <span>CSV</span>
+                            <span>{this.props.translation.CSV}</span>
                         </a>
                         <a href>
                             <img src={process.env.PUBLIC_URL + '/statistics-report.png'} className="img" alt={this.props.campaignDetail.name} />
-                            <span>Report</span>
+                            <span>{this.props.translation.report}</span>
                         </a>
                         <a href>
                             <img src={process.env.PUBLIC_URL + '/calendar.png'} className="img" alt={this.props.campaignDetail.name} />
-                            <span>Schedule Again</span>
+                            <span>{this.props.translation.schedule_again}</span>
                         </a>
                     </div>
                 </div>
@@ -52,10 +52,17 @@ class CampaignDetail extends Component{
         );
     }
 }
+
+const mapPropsToDispatch = (state) => {
+    return {
+        translation: state.localizationReducer.translation
+    }
+}
+
 const mapActionToDispatch = (dispatch) => {
     return {
         setSelectedCampaign: (campaignDetail) => dispatch(setSelectedCampaign(campaignDetail))
     }
 }
 
-export default connect(null, mapActionToDispatch)(CampaignDetail);
+export default connect(mapPropsToDispatch, mapActionToDispatch)(CampaignDetail);

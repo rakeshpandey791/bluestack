@@ -11,13 +11,14 @@ class CampaignPricing extends Component {
 
                 <div className="modal-content">
                     <div className="compain-heading">
-                        <div><img src={process.env.PUBLIC_URL + '/' +  this.props.selectedCampaign.image_url} alt="Campaign Img"/></div>
+                        <div><img src={process.env.PUBLIC_URL + '/' +  this.props.selectedCampaign.image_url}
+                                  alt={this.props.selectedCampaign.name}/></div>
                         <div>
                             <p>{this.props.selectedCampaign.name}</p>
                             <small>{this.props.selectedCampaign.region}</small>
                         </div>
                     </div>
-                    <h1>Pricing</h1>
+                    <h1>{this.props.translation.pricing}</h1>
                     {
                         this.props.selectedCampaign.price.map( (price, index) => (
                             <div className="pricing" key={index}>
@@ -27,12 +28,20 @@ class CampaignPricing extends Component {
                         ))
                     }
                     <div align="center">
-                        <button type="button" className="btn" onClick={this.props.setSelectedCampaignToNull}>Close</button>
+                        <button type="button" className="btn" onClick={this.props.setSelectedCampaignToNull}>
+                            {this.props.translation.close}
+                        </button>
                     </div>
                 </div>
 
             </div>
         );
+    }
+}
+
+const mapPropsToDispatch = (state) => {
+    return {
+        translation: state.localizationReducer.translation
     }
 }
 
@@ -42,4 +51,4 @@ const mapActionToDispatch = (dispatch) => {
     };
 }
 
-export default connect(null, mapActionToDispatch)(CampaignPricing);
+export default connect(mapPropsToDispatch, mapActionToDispatch)(CampaignPricing);
