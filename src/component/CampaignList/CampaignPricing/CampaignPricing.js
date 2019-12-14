@@ -11,7 +11,7 @@ class CampaignPricing extends Component {
 
                 <div className="modal-content">
                     <div className="compain-heading">
-                        <div><img src={window.location.origin + '/' +  this.props.selectedCampaign.image_url} alt="Campaign Img"/></div>
+                        <div><img src={process.env.PUBLIC_URL + '/' +  this.props.selectedCampaign.image_url} alt="Campaign Img"/></div>
                         <div>
                             <p>{this.props.selectedCampaign.name}</p>
                             <small>{this.props.selectedCampaign.region}</small>
