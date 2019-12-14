@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5273adcd34d5120aab70bd28e2ddf6bf",
+    "revision": "a0e8b98636d9b3fb59ce6779a2302aac",
     "url": "/bluestack/index.html"
   },
   {
-    "revision": "d25532e993f4dc45e501",
+    "revision": "9c828f3347b99c6ae7ec",
     "url": "/bluestack/static/css/main.229a3dc1.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bluestack/static/js/2.37c83ef0.chunk.js"
   },
   {
-    "revision": "d25532e993f4dc45e501",
-    "url": "/bluestack/static/js/main.3d848cca.chunk.js"
+    "revision": "9c828f3347b99c6ae7ec",
+    "url": "/bluestack/static/js/main.e26d5433.chunk.js"
   },
   {
     "revision": "1d2b29e8e25047197037",
