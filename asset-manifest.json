@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/bluestack/static/css/main.229a3dc1.chunk.css",
-    "main.js": "/bluestack/static/js/main.2e988096.chunk.js",
-    "main.js.map": "/bluestack/static/js/main.2e988096.chunk.js.map",
+    "main.css": "/bluestack/static/css/main.5ea8d1be.chunk.css",
+    "main.js": "/bluestack/static/js/main.78d85070.chunk.js",
+    "main.js.map": "/bluestack/static/js/main.78d85070.chunk.js.map",
     "runtime-main.js": "/bluestack/static/js/runtime-main.605cc936.js",
     "runtime-main.js.map": "/bluestack/static/js/runtime-main.605cc936.js.map",
-    "static/js/2.b6a95fe6.chunk.js": "/bluestack/static/js/2.b6a95fe6.chunk.js",
-    "static/js/2.b6a95fe6.chunk.js.map": "/bluestack/static/js/2.b6a95fe6.chunk.js.map",
+    "static/js/2.dfdcdd24.chunk.js": "/bluestack/static/js/2.dfdcdd24.chunk.js",
+    "static/js/2.dfdcdd24.chunk.js.map": "/bluestack/static/js/2.dfdcdd24.chunk.js.map",
     "index.html": "/bluestack/index.html",
-    "precache-manifest.6f35c701216884ff8a0b87f177d72370.js": "/bluestack/precache-manifest.6f35c701216884ff8a0b87f177d72370.js",
+    "precache-manifest.45982a5e25030a86ebb2f14ff8e10a04.js": "/bluestack/precache-manifest.45982a5e25030a86ebb2f14ff8e10a04.js",
     "service-worker.js": "/bluestack/service-worker.js",
-    "static/css/main.229a3dc1.chunk.css.map": "/bluestack/static/css/main.229a3dc1.chunk.css.map"
+    "static/css/main.5ea8d1be.chunk.css.map": "/bluestack/static/css/main.5ea8d1be.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.605cc936.js",
-    "static/js/2.b6a95fe6.chunk.js",
-    "static/css/main.229a3dc1.chunk.css",
-    "static/js/main.2e988096.chunk.js"
+    "static/js/2.dfdcdd24.chunk.js",
+    "static/css/main.5ea8d1be.chunk.css",
+    "static/js/main.78d85070.chunk.js"
   ]
 }
