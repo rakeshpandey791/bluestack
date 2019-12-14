@@ -17,7 +17,7 @@ class CampaignDetail extends Component{
                         <small>{moment(this.props.campaignDetail.createdOn).fromNow()}</small>
                     </div>
                     <div className="campaign-name">
-                        <div><img src={window.location.origin +'/' + this.props.campaignDetail.image_url} alt="Campaign Image" /></div>
+                        <div><img src={window.location.origin +'/' + this.props.campaignDetail.image_url} alt={this.props.campaignDetail.name} /></div>
                         <div>
                             <p>{this.props.campaignDetail.name}</p>
                             <p><small>{this.props.campaignDetail.region}</small></p>
@@ -26,22 +26,22 @@ class CampaignDetail extends Component{
 
                     </div>
                     <div>
-                        <a href="javascript: void(0)" onClick={() => this.props.setSelectedCampaign(this.props.campaignDetail)}>
-                            <img src={window.location.origin + '/price.png'} className="img" />
+                        <a href onClick={() => this.props.setSelectedCampaign(this.props.campaignDetail)}>
+                            <img src={window.location.origin + '/price.png'} className="img" alt={this.props.campaignDetail.name}/>
                             <span>View Price </span>
                         </a>
                     </div>
                     <div>
-                        <a href="javascript: void(0)">
-                            <img src={window.location.origin + '/file.png'} className="img" />
+                        <a href>
+                            <img src={window.location.origin + '/file.png'} className="img" alt={this.props.campaignDetail.name} />
                             <span>CSV</span>
                         </a>
-                        <a href="javascript: void(0)">
-                            <img src={window.location.origin + '/statistics-report.png'} className="img" />
+                        <a href>
+                            <img src={window.location.origin + '/statistics-report.png'} className="img" alt={this.props.campaignDetail.name} />
                             <span>Report</span>
                         </a>
-                        <a href="javascript: void(0)">
-                            <img src={window.location.origin + '/calendar.png'} className="img" />
+                        <a href>
+                            <img src={window.location.origin + '/calendar.png'} className="img" alt={this.props.campaignDetail.name} />
                             <span>Schedule Again</span>
                         </a>
                     </div>

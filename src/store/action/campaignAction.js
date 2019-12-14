@@ -31,6 +31,8 @@ const getCampaignListData = (campaignReducerData) => {
                 return todatDate > campaignDate;
             });
             break;
+        default:
+            return true;
 
     }
     return retObj;

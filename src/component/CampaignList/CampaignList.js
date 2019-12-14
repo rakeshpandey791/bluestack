@@ -34,15 +34,15 @@ class CampaignList extends Component {
                     <div className="tab-container" onClick={this.changeTab}>
                         <div className={`tab-item ' ${this.props.campaignType ===  'UPCOMING' ? 'active' :''}`}
                              data-type="UPCOMING">
-                            <a href="javascript: void(0)" className={this.props.campaignType ===  'UPCOMING' ? 'active' :''} data-type="UPCOMING">Upcoming Campaigns</a>
+                            <a href className={this.props.campaignType ===  'UPCOMING' ? 'active' :''} data-type="UPCOMING">Upcoming Campaigns</a>
                         </div>
                         <div className={`tab-item ' ${this.props.campaignType ===  'LIVE' ? 'active' :''}`}
                              data-type="LIVE">
-                            <a href="javascript: void(0)" className={this.props.campaignType ===  'LIVE' ? 'active' :''} data-type="LIVE">Live Campaigns</a>
+                            <a href className={this.props.campaignType ===  'LIVE' ? 'active' :''} data-type="LIVE">Live Campaigns</a>
                         </div>
                         <div className={`tab-item ' ${this.props.campaignType ===  'PAST' ? 'active' :''}`}
                              data-type="PAST">
-                            <a href="javascript: void(0)" className={this.props.campaignType ===  'PAST' ? 'active' :''} data-type="PAST">Past Campaigns</a>
+                            <a href className={this.props.campaignType ===  'PAST' ? 'active' :''} data-type="PAST">Past Campaigns</a>
                         </div>
                     </div>
                     <div className="data-container">
