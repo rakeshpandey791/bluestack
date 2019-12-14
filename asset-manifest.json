@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/bluestack/static/css/main.229a3dc1.chunk.css",
-    "main.js": "/bluestack/static/js/main.70e01522.chunk.js",
-    "main.js.map": "/bluestack/static/js/main.70e01522.chunk.js.map",
+    "main.js": "/bluestack/static/js/main.0280dc6c.chunk.js",
+    "main.js.map": "/bluestack/static/js/main.0280dc6c.chunk.js.map",
     "runtime-main.js": "/bluestack/static/js/runtime-main.605cc936.js",
     "runtime-main.js.map": "/bluestack/static/js/runtime-main.605cc936.js.map",
     "static/js/2.5e3de6ca.chunk.js": "/bluestack/static/js/2.5e3de6ca.chunk.js",
     "static/js/2.5e3de6ca.chunk.js.map": "/bluestack/static/js/2.5e3de6ca.chunk.js.map",
     "index.html": "/bluestack/index.html",
-    "precache-manifest.7cddbc550babca0f2cb3931f88f4f16b.js": "/bluestack/precache-manifest.7cddbc550babca0f2cb3931f88f4f16b.js",
+    "precache-manifest.e29907229da8418500451eedbe49511a.js": "/bluestack/precache-manifest.e29907229da8418500451eedbe49511a.js",
     "service-worker.js": "/bluestack/service-worker.js",
     "static/css/main.229a3dc1.chunk.css.map": "/bluestack/static/css/main.229a3dc1.chunk.css.map"
   },
@@ -16,6 +16,6 @@
     "static/js/runtime-main.605cc936.js",
     "static/js/2.5e3de6ca.chunk.js",
     "static/css/main.229a3dc1.chunk.css",
-    "static/js/main.70e01522.chunk.js"
+    "static/js/main.0280dc6c.chunk.js"
   ]
 }
