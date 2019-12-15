@@ -14,3 +14,22 @@
     padding-top: 10%;
   }
 }
+
+@media screen and (max-width: 720px) {
+  .header {
+    grid-template-columns: 1% 73% 25% 1%;
+    padding-top: 4%;
+    padding-left: 1%;
+
+    .logo {
+      width: 45%;
+    }
+
+    .pt-5 {
+      padding-top: 10%;
+    }
+    select {
+      color: #ffffff;
+    }
+  }
+}

@@ -1,13 +1,33 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
-import {setSelectedCampaign} from './../../../store/action/campaignAction';
+import {setSelectedCampaign, scheduleAgain} from './../../../store/action/campaignAction';
 
 import './CampaignDetail.scss';
 import moment from "moment";
+import DatePicker from "react-datepicker";
+
+import "react-datepicker/dist/react-datepicker.css";
 
 class CampaignDetail extends Component{
 
+    state = {
+        startDate: new Date()
+    };
+
+    handleChange = date => {
+        this.props.scheduleAgain(this.props.campaignDetail.id, date);
+    };
+
     render() {
+        const ExampleCustomInput = ({ onClick }) => (
+            <button onClick={onClick}>
+                <a href>
+                    <img src={process.env.PUBLIC_URL + '/calendar.png'} className="img" alt={this.props.campaignDetail.name} />
+                    <span>{this.props.translation.schedule_again}</span>
+
+                </a>
+            </button>
+        );
         return (
             <div className="list-row">
                 <div></div>
@@ -40,10 +60,16 @@ class CampaignDetail extends Component{
                             <img src={process.env.PUBLIC_URL + '/statistics-report.png'} className="img" alt={this.props.campaignDetail.name} />
                             <span>{this.props.translation.report}</span>
                         </a>
-                        <a href>
-                            <img src={process.env.PUBLIC_URL + '/calendar.png'} className="img" alt={this.props.campaignDetail.name} />
-                            <span>{this.props.translation.schedule_again}</span>
-                        </a>
+                        {/*<a href>*/}
+                        {/*    <img src={process.env.PUBLIC_URL + '/calendar.png'} className="img" alt={this.props.campaignDetail.name} />*/}
+                        {/*    <span>{this.props.translation.schedule_again}</span>*/}
+
+                        {/*</a>*/}
+                        <DatePicker
+                            onChange={this.handleChange}
+                            customInput={<ExampleCustomInput />}
+                        />
+
                     </div>
                 </div>
                 <div></div>
@@ -61,7 +87,8 @@ const mapPropsToDispatch = (state) => {
 
 const mapActionToDispatch = (dispatch) => {
     return {
-        setSelectedCampaign: (campaignDetail) => dispatch(setSelectedCampaign(campaignDetail))
+        setSelectedCampaign: (campaignDetail) => dispatch(setSelectedCampaign(campaignDetail)),
+        scheduleAgain: (id, date) => dispatch(scheduleAgain(id, date))
     }
 }
 

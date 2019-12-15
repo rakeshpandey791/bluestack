@@ -37,6 +37,50 @@
         width: 20px;
       }
     }
+
+    button {
+      border: none;
+      width: 150px;
+      outline: none;
+    }
   }
 
+}
+
+@media screen and (max-width: 720px) {
+  .list-row {
+
+    .list-data {
+
+      p{
+        font-size: 12px;
+      }
+      .campaign-name {
+        grid-template-columns: 100%;
+        img {
+          width: 25px;
+          border-radius: 2px;
+        }
+
+      }
+
+      a {
+        font-size: 10px;
+        margin-right: 2%;
+        position: relative;
+        span {
+        }
+        .img {
+          width: 20px;
+        }
+      }
+
+      button {
+        border: none;
+        width: 150px;
+        outline: none;
+      }
+    }
+
+  }
 }

@@ -1,4 +1,4 @@
-import {GET_CAMPAIGN_LIST, UPDATE_CAMPAIGN_TYPE, SET_SELECTED_CAMPAIGN} from "../actionConstant";
+import {GET_CAMPAIGN_LIST, UPDATE_CAMPAIGN_TYPE, SET_SELECTED_CAMPAIGN, SCHEDULE_AGAIN} from "../actionConstant";
 import campaigns from '../campaign';
 
 const getCampaignListData = (campaignReducerData) => {
@@ -69,11 +69,34 @@ export const updateCampaignType = (campaignType) => {
     }
 }
 
+export const scheduleAgain = (id, date) => {
+    return (dispatch, getState) => {
+        const campaignReducerData = getState().campaignReducer;
+
+        const dataToUpdateLocalStorage = campaignReducerData.campaignLSData ? campaignReducerData.campaignLSData : campaigns.data;
+        for(let i=0; i<dataToUpdateLocalStorage.length; i++) {
+            if (id === dataToUpdateLocalStorage[i].id) {
+                dataToUpdateLocalStorage[i].createdOn = date;
+            }
+        }
+        localStorage.setItem('campaignList', JSON.stringify(dataToUpdateLocalStorage));
+
+        const campaignListObj = getCampaignListData(campaignReducerData);
+
+        dispatch({type: GET_CAMPAIGN_LIST,
+            payload: {campaignList: campaignListObj.campaignList}});
+    }
+}
+
+
+
 export const setSelectedCampaign = (campaignDetail) => {
     return (dispatch) => {
         dispatch({type: SET_SELECTED_CAMPAIGN, payload: campaignDetail});
     }
 }
+
+
 
 
 
