@@ -1,5 +1,5 @@
-import {GET_CAMPAIGN_LIST, UPDATE_CAMPAIGN_TYPE, SET_SELECTED_CAMPAIGN, CAMPAIGN_TYPE} from "../actionConstant";
-import campaigns from '../campaign';
+import {GET_CAMPAIGN_LIST, UPDATE_CAMPAIGN_TYPE, SET_SELECTED_CAMPAIGN, CAMPAIGN_TYPE} from "src/store/actionConstant";
+import campaigns from 'src/store/campaign';
 
 /*
     Return data based on campaign Type(Upcoming, live and past) and will trigger when user switch tabs

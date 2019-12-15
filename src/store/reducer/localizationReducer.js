@@ -1,5 +1,5 @@
-import {CHANGE_LANGUAGE} from "../actionConstant";
-import {data} from './../../i18n';
+import {CHANGE_LANGUAGE} from "src/store/actionConstant";
+import {data} from 'src/i18n';
 
 const initialState = {
     translation: data.en

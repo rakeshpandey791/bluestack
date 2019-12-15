@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
-import './CampaignList.scss';
-import {getCampaignList, updateCampaignType} from "../../store/action/campaignAction";
-import CampaignDetail from "./CampaignDetail/CampaignDetail";
-import CampaignPricing from "./CampaignPricing/CampaignPricing";
+import 'src/component/CampaignList/CampaignList.scss';
+import {getCampaignList, updateCampaignType} from "src/store/action/campaignAction";
+import CampaignDetail from "src/component/CampaignList/CampaignDetail/CampaignDetail";
+import CampaignPricing from "src/component/CampaignList/CampaignPricing/CampaignPricing";
 
 class CampaignList extends Component {
     constructor() {

@@ -1,4 +1,4 @@
-import {GET_CAMPAIGN_LIST, SET_SELECTED_CAMPAIGN, UPDATE_CAMPAIGN_TYPE, CAMPAIGN_TYPE} from "../actionConstant";
+import {GET_CAMPAIGN_LIST, SET_SELECTED_CAMPAIGN, UPDATE_CAMPAIGN_TYPE, CAMPAIGN_TYPE} from "src/store/actionConstant";
 
 const initialState = {
     campaignList: [],

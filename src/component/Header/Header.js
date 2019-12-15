@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import './Header.scss';
-import {CHANGE_LANGUAGE} from "./../../store/actionConstant";
+import 'src/component/Header/Header.scss';
+import {CHANGE_LANGUAGE} from "src/store/actionConstant";
 
 class Header extends Component {
 

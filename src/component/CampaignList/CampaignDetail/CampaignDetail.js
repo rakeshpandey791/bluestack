@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
-import {setSelectedCampaign, scheduleAgain} from './../../../store/action/campaignAction';
+import {setSelectedCampaign, scheduleAgain} from 'src/store/action/campaignAction';
 
-import './CampaignDetail.scss';
+import 'src/component/CampaignList/CampaignDetail/CampaignDetail.scss';
 import moment from "moment";
 import DatePicker from "react-datepicker";
 

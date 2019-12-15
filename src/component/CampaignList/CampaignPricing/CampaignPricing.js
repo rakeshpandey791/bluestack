@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import './CampaignPricing.scss';
-import {setSelectedCampaign} from './../../../store/action/campaignAction';
+import 'src/component/CampaignList/CampaignPricing/CampaignPricing.scss';
+import {setSelectedCampaign} from 'src/store/action/campaignAction';
 
 class CampaignPricing extends Component {
 
