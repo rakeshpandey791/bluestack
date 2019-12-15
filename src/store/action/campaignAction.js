@@ -1,6 +1,12 @@
-import {GET_CAMPAIGN_LIST, UPDATE_CAMPAIGN_TYPE, SET_SELECTED_CAMPAIGN, SCHEDULE_AGAIN} from "../actionConstant";
+import {GET_CAMPAIGN_LIST, UPDATE_CAMPAIGN_TYPE, SET_SELECTED_CAMPAIGN, CAMPAIGN_TYPE} from "../actionConstant";
 import campaigns from '../campaign';
 
+/*
+    Return data based on campaign Type(Upcoming, live and past) and will trigger when user switch tabs
+    Upcoming: In case of Upcoming, It will return all the record with createdOn date is greater than today date
+    Live: In case of Live, It will return all the record with createdOn date is equal to today date
+    Past: In case of Past, It will return all the record with createdOn date is less than today date
+ */
 const getCampaignListData = (campaignReducerData) => {
     const retObj = {
         campaignList: campaignReducerData.campaignLSData ? campaignReducerData.campaignLSData : campaigns.data
@@ -8,7 +14,7 @@ const getCampaignListData = (campaignReducerData) => {
     const todatDate = new Date();
     todatDate.setHours(0,0,0,0);
     switch (campaignReducerData.campaignType) {
-        case "UPCOMING":
+        case CAMPAIGN_TYPE.UPCOMING:
             retObj.campaignList = retObj.campaignList.filter( campaign => {
                 const campaignDate = new Date(campaign.createdOn);
                 campaignDate.setHours(0,0, 0, 0);
@@ -16,7 +22,7 @@ const getCampaignListData = (campaignReducerData) => {
             });
             break;
 
-        case "LIVE":
+        case CAMPAIGN_TYPE.LIVE:
             retObj.campaignList = retObj.campaignList.filter( campaign => {
                 const campaignDate = new Date(campaign.createdOn);
                 campaignDate.setHours(0,0, 0, 0);
@@ -24,7 +30,7 @@ const getCampaignListData = (campaignReducerData) => {
             });
             break;
 
-        case "PAST":
+        case CAMPAIGN_TYPE.PAST:
             retObj.campaignList = retObj.campaignList.filter( campaign => {
                 const campaignDate = new Date(campaign.createdOn);
                 campaignDate.setHours(0,0, 0, 0);
@@ -38,6 +44,9 @@ const getCampaignListData = (campaignReducerData) => {
     return retObj;
 }
 
+/*
+    Called first time when user reloads the browser
+ */
 export const getCampaignList = () => {
     return (dispatch, getState) => {
         if (!localStorage.getItem('campaignList')) {
@@ -57,6 +66,9 @@ export const getCampaignList = () => {
     }
 }
 
+/*
+    Called when when user switch the tabs
+ */
 export const updateCampaignType = (campaignType) => {
     return (dispatch, getState) => {
         dispatch({type: UPDATE_CAMPAIGN_TYPE, payload: campaignType});
@@ -69,6 +81,9 @@ export const updateCampaignType = (campaignType) => {
     }
 }
 
+/*
+    Called when user re-schedule campaign using calander
+ */
 export const scheduleAgain = (id, date) => {
     return (dispatch, getState) => {
         const campaignReducerData = getState().campaignReducer;
@@ -88,8 +103,9 @@ export const scheduleAgain = (id, date) => {
     }
 }
 
-
-
+/*
+    Called when user click on View Price link to see pricing details
+ */
 export const setSelectedCampaign = (campaignDetail) => {
     return (dispatch) => {
         dispatch({type: SET_SELECTED_CAMPAIGN, payload: campaignDetail});

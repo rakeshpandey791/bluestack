@@ -8,11 +8,8 @@ import CampaignPricing from "./CampaignPricing/CampaignPricing";
 class CampaignList extends Component {
     constructor() {
         super();
-        this.state = {
-            redirect: false,
-            id: ''
-        };
     }
+
     componentDidMount() {
         this.props.getCampaignList();
     }

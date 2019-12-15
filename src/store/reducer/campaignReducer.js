@@ -1,8 +1,8 @@
-import {GET_CAMPAIGN_LIST, SET_SELECTED_CAMPAIGN, UPDATE_CAMPAIGN_TYPE} from "../actionConstant";
+import {GET_CAMPAIGN_LIST, SET_SELECTED_CAMPAIGN, UPDATE_CAMPAIGN_TYPE, CAMPAIGN_TYPE} from "../actionConstant";
 
 const initialState = {
     campaignList: [],
-    campaignType: 'UPCOMING',
+    campaignType: CAMPAIGN_TYPE.UPCOMING,
     selectedCampaign: null,
     campaignLSData: JSON.parse(localStorage.getItem('campaignList'))
 };
