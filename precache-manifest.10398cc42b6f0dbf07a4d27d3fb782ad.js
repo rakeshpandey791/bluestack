@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4dac62bbed1e60165b1d21c209f833ad",
+    "revision": "73cfbbc7513b1a61b73541fbad2ed6da",
     "url": "/bluestack/index.html"
   },
   {
